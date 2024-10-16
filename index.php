@@ -1,4 +1,5 @@
 <?php
+
 /**
  * index.php - Le modèle par défaut de Wordpress
  */
@@ -6,14 +7,16 @@
 
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>31W</title>
     <?php wp_head(); ?>
 </head>
+
 <body>
-    <header>
+    <header class="entete">
         <section class="global">
             <nav>
                 <ul>
@@ -29,12 +32,21 @@
             </form>
         </section>
     </header>
-    <main>
+    <main class="principal">
         <section class="global"></section>
         <h2>Acceuil</h2>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis impedit magni debitis sit fugit dolor labore asperiores vel exercitationem possimus laborum, quas, ipsam reiciendis nulla quia. Voluptatibus reiciendis iste ipsa.</p>
+        <?php if (have_posts()):   /*permet d'extraire les articles*/ ?>
+            <?php while (have_posts()): the_post(); /* extrait un post */ ?>
+                <article class="principal__article">
+                    <h2> 
+                        <?php echo get_the_title(); /* fonctionne seulement si the_post() est exécuté  / get_ sont des fonctions qui retournent des chaines de caracteres*/ ?>
+                    </h2>
+                    <p><?php echo wp_trim_words(get_the_excerpt(), 20, null);   /* fonctionne seulement si the_post() est exécuté */ ?></p>
+                </article>
+            <?php endwhile; ?>
+        <?php endif ?>
     </main>
-    <footer>
+    <footer class="pied">
         <section class="global">
             <div>1</div>
             <div>2</div>
@@ -43,4 +55,5 @@
     </footer>
     <?php wp_footer() ?>
 </body>
+
 </html>
