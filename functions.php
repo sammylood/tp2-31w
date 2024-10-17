@@ -10,3 +10,14 @@ wp_enqueue_style(
 }
 
     add_action( 'wp_enqueue_scripts', 'ajoute_style' ); // équivalent à addEventListener
+
+
+
+
+    function ajout_options(){
+        
+        //  Activer le support de menus personnalisés
+         add_theme_support('menus'); 
+    }
+
+    add_action( "after_setup_theme", "ajout_options" );

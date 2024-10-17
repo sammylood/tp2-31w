@@ -4,46 +4,30 @@
  * index.php - Le modèle par défaut de Wordpress
  */
 ?>
+<?php get_header(); ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>31W</title>
-    <?php wp_head(); ?>
-</head>
-
-<body>
-    <header class="entete">
-        <section class="global">
-            <nav>
-                <ul>
-                    <li>Accueil</li>
-                    <li>À propos</li>
-                    <li>Contact</li>
-                </ul>
-            </nav>
-            <h1>31W</h1>
-            <form action="" class="recherche">
-                <input type="search" name="" id="">
-                <img src="https://s2.svgbox.net/hero-outline.svg?ic=search" width="20" height="20" alt="">
-            </form>
-        </section>
-    </header>
     <main class="principal">
         <section class="global"></section>
-        <h2>Acceuil</h2>
+        <h2>Liste de cours</h2>
+       <div class="principal__conteneur">
         <?php if (have_posts()):   /*permet d'extraire les articles*/ ?>
             <?php while (have_posts()): the_post(); /* extrait un post */ ?>
+                <?php
+                    $chaine = get_the_title();
+                    $sigle = substr($chaine, 0, 7);
+                    $titre = substr($chaine, 8, stripos($chaine,"(") - 8);
+                ?>
                 <article class="principal__article">
-                    <h2> 
-                        <?php echo get_the_title(); /* fonctionne seulement si the_post() est exécuté  / get_ sont des fonctions qui retournent des chaines de caracteres*/ ?>
-                    </h2>
+                    <h3> 
+                        <?php echo $sigle; /* fonctionne seulement si the_post() est exécuté  / get_ sont des fonctions qui retournent des chaines de caracteres*/ ?>
+                    </h3>
+                    <h4> 
+                        <?php echo $titre; /* fonctionne seulement si the_post() est exécuté  / get_ sont des fonctions qui retournent des chaines de caracteres*/ ?>
+                    </h4>
                     <p><?php echo wp_trim_words(get_the_excerpt(), 20, null);   /* fonctionne seulement si the_post() est exécuté */ ?></p>
                 </article>
             <?php endwhile; ?>
+        </div>
         <?php endif ?>
     </main>
     <footer class="pied">
