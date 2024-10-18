@@ -1,0 +1,14 @@
+.pied .global {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    min-height: 50px;
+}
+
+.pied .global > div {
+    flex: 1 1 300px;
+    align-self: center;
+
+}

@@ -18,18 +18,19 @@
                     <li>Contact</li>
                 </ul>
             </nav> -->
-
-            <?php wp_nav_menu(
-                array(
-                    "menu"=>"principal",
-                    "container"=>"nav"
-                )
-            ) ?>
+            <div class="entete__menu">
+                <?php wp_nav_menu(
+                    array(
+                        "menu" => "principal",
+                        "container" => "nav"
+                    )
+                ) ?>
+                <form action="" class="recherche">
+                    <img src="https://s2.svgbox.net/hero-outline.svg?ic=search" width="20" height="20" alt="">
+                    <input type="search" name="" id="">
+                </form>
+            </div>
             <h1><?php bloginfo('name') ?></h1>
             <h2><?php bloginfo('description') ?></h2>
-            <form action="" class="recherche">
-                <input type="search" name="" id="">
-                <img src="https://s2.svgbox.net/hero-outline.svg?ic=search" width="20" height="20" alt="">
-            </form>
         </section>
     </header>

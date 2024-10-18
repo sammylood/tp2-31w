@@ -21,6 +21,7 @@ Text Domain: theme-31w
 // @import "base/list";
 
 /* --------------------------------------------- composant */
-// @import "composants/entete";
+@import "composants/entete";
+@import "composants/footer";
 @import "composants/navigation";
 @import "composants/bloc";

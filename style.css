@@ -332,6 +332,7 @@ template {
 
 .principal {
   background-color: rgb(255, 255, 255);
+  padding-bottom: 40px;
 }
 
 .pied {
@@ -387,6 +388,28 @@ p {
 }
 
 /* --------------------------------------------- composant */
+.entete__menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.pied .global {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  min-height: 50px;
+}
+
+.pied .global > div {
+  flex: 1 1 300px;
+  align-self: center;
+}
+
 nav ul {
   list-style-type: none;
   padding: 0;
@@ -442,7 +465,7 @@ nav > ul {
   border: 1px solid #aaa;
   flex: 1 1 300px;
   padding: 10px;
-  min-height: 350px;
+  min-height: 375px;
 }
 
 .principal__article--title {
