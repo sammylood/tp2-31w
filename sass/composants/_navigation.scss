@@ -1,0 +1,57 @@
+// <nav class="menu-principal-container"><ul id="menu-principal" class="menu"><li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-30"><a href="http://localhost/31w/582-6n3-stage-285h/">Stage</a></li><li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-31"><a href="http://localhost/31w/582-4w4-conception-dinterfaces-et-developpement-web/">Conception Web</a></li><li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost/31w/582-4c2-gestion-de-projets-multimedias/">Gestion de projets</a></li><li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost/31w/582-3c1-design-dinteractivite-75h/">Design d’interactivité</a></li><li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost/31w/582-3m5imagerie-3d-75h/">Imagerie 3D</a></li></ul></nav>
+
+.menu-principal-container { //nav
+    .menu{ //ul
+        .menu-item { // li
+            a {
+
+            }
+        }
+    }
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    transition-property: background-color;
+    transition-duration: 120ms;
+}
+
+nav a:hover {
+    background-color: aqua;
+}
+
+
+
+nav>ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item-has-children {
+    position: relative;
+}
+
+.menu-item-has-children > ul {
+    position: absolute;
+    width: max-content;
+    top: 100%;
+    padding: 10px;
+    background-color: lightgray;
+    transition-property: opacity, transform;
+    transition-duration: 200ms;
+}
+
+.menu-item-has-children:not(:hover) > ul {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+}
+// .menu-principal-container 
+// .menu-principal-container .menu
+// .menu-principal-container  .menu .menu-item

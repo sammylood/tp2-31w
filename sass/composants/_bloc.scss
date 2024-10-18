@@ -4,10 +4,16 @@
   flex-wrap: wrap;
   gap:20px;
   align-items: center;
+  flex-basis: 1100px;
 }
 
 .principal__article {
   border: 1px solid #aaa;
-  flex : 1 1 340px;
+  flex : 1 1 300px;
   padding:10px;
+  min-height: 350px;
+}
+
+.principal__article--title {
+min-height: 3lh;
 }
