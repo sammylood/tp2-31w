@@ -8,7 +8,7 @@
 
 <main class="principal">
     <section class="global">
-        <h2>Liste de cours - index.php</h2>
+        <h2>Liste de cours - Front-page.php</h2>
         <div class="principal__conteneur">
             <?php if (have_posts()):   /*permet d'extraire les articles*/ ?>
                 <?php while (have_posts()): the_post(); /* extrait un post */ ?>

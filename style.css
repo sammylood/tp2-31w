@@ -11,6 +11,8 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: theme-31w
 */
+/* --------------------------------------------- variables et mixin */
+/* --------------------------------------------- variables et mixin */
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -320,14 +322,36 @@ template {
   display: none;
 }
 
+:root {
+  --couleur1: #e86711;
+  --couleur2: #1c88a8;
+  --couleur3: #b40edd;
+}
+
+html, body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .global {
-  width: 1100px;
+  max-width: 1100px;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+/*.entete {
+    background-color: rgb(169, 209, 209);
+
+}*/
 .entete {
-  background-color: aqua;
+  color: var(--couleur1);
+}
+
+.entete {
+  color: var(--couleur2);
 }
 
 .principal {
@@ -370,6 +394,11 @@ P {
 
 h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.entete __titre h1 a {
+  color: --couleur2;
+  background-color: arriere;
 }
 
 h2 {
@@ -470,4 +499,26 @@ nav > ul {
 
 .principal__article--title {
   min-height: 3lh;
+}
+
+/*<form class="recherche" role="search" method="get" action="http://localhost/31w/"><label><input class="recherche__input" type="search" placeholder="Search..." value="" name="s"></label><button class="recherche__bouton" type="submit"><span class="recherche__icone"><img draggable="false" role="img" class="emoji" alt="🔍" src="https://s.w.org/images/core/emoji/15.0.3/svg/1f50d.svg"></span></button></form>
+*/
+.recherche {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.recherche __input {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+}
+.recherche __input:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.recherche __input:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+.rechercheinput::placeholder {
+  color: #333;
+  font-size: 1.5em;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,23 @@
+/*<form class="recherche" role="search" method="get" action="http://localhost/31w/"><label><input class="recherche__input" type="search" placeholder="Search..." value="" name="s"></label><button class="recherche__bouton" type="submit"><span class="recherche__icone"><img draggable="false" role="img" class="emoji" alt="🔍" src="https://s.w.org/images/core/emoji/15.0.3/svg/1f50d.svg"></span></button></form>
+*/
+.recherche{
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    & __input{
+    background-color: rgba(0,0,0,0.3);
+    border: none;
+    outline:none;
+    &:hover{
+        background-color: rgba(0,0,0,0.2);
+    }
+    &:focus{
+        background-color: rgba(0, 0, 0, 0.1);
+        outline: none;
+    }
+}
+
+&input::placeholder{
+    color: #333;
+    font-size:1.5em;
+
+}
+}
