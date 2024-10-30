@@ -43,4 +43,5 @@ function modifie_requete_principal($query)
         $query->set('order', 'ASC');
     }
 }
+
 add_action('pre_get_posts', 'modifie_requete_principal');
