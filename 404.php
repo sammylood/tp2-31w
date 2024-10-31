@@ -12,6 +12,19 @@
         <div class="principal__404">
             <h1>Erreur 404</h1>
             <?php
+            $chaine = get_the_title();
+            $sigle = substr($chaine, 0, 7);
+            $titre = substr($chaine, 8, stripos($chaine, "(") - 8);
+            ?>
+            <?php
+            $chaine = get_the_title();
+            $sigle = substr($chaine, 0, 7);
+            $position_parentheses = strpos($chaine, '(');
+            $titre = substr($chaine, 7, $position_parentheses - 7);
+            $duree = substr($chaine, $position_parentheses);
+
+            ?>
+            <?php
             // wp_nav_menu(array(
             //     "menu" => "erreur404",
             //     "container" => "nav"
