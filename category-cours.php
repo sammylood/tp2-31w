@@ -34,7 +34,7 @@
                         </h4>
                         <p><?php echo wp_trim_words(get_the_excerpt(), 20, "... suite");   /* fonctionne seulement si the_post() est exécuté */ ?></p>
                         <h5>Durée: <?php echo $duree ?></h5>
-                        <h5><?php the_field('professeur'); ?></h5>
+                        <h5>Enseignant: <?php the_field('professeur'); ?></h5>
                         <!-- Insérer des liens et rendre le css plus uniforme -->
                     </article>
                 <?php endwhile; ?>

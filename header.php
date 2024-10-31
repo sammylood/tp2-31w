@@ -29,14 +29,22 @@
                         "menu" => "principal",
                         "container" => "nav"
                     )
-                ) ?>
+                    ); ?>
                 <!-- <form action="" class="recherche">
                     <img src="https://s2.svgbox.net/hero-outline.svg?ic=search" width="20" height="20" alt="">
                     <input type="search" name="" id="">
                 </form> -->
                 <?php get_search_form(); ?>
             </div>
-            <h1><?php bloginfo('name') ?></h1>
-            <h2><?php bloginfo('description') ?></h2>
+            <!-- <h1>
+                    <?php
+                    // bloginfo('name') 
+                    ?>
+                </h1>
+            <h2>
+                <?php
+                //  bloginfo('description') 
+                ?>
+            </h2> -->
         </section>
     </header>
