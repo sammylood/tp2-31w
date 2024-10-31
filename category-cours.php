@@ -19,9 +19,9 @@
                     ?>
                     <?php
                     $chaine = get_the_title();
-                    $sigle = substr($chaine,0,7);
+                    $sigle = substr($chaine, 0, 7);
                     $position_parentheses = strpos($chaine, '(');
-                    $titre = substr($chaine, 7, $position_parentheses-7);
+                    $titre = substr($chaine, 7, $position_parentheses - 7);
                     $duree = substr($chaine, $position_parentheses);
 
                     ?>
@@ -34,6 +34,7 @@
                         </h4>
                         <p><?php echo wp_trim_words(get_the_excerpt(), 20, "... suite");   /* fonctionne seulement si the_post() est exécuté */ ?></p>
                         <h5>Durée: <?php echo $duree ?></h5>
+                        <h5><?php the_field('professeur'); ?></h5>
                         <!-- Insérer des liens et rendre le css plus uniforme -->
                     </article>
                 <?php endwhile; ?>
