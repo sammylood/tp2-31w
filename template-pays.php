@@ -31,6 +31,7 @@
                                 echo "Date de départ (personne 4): ";
                             }
                             the_field('la_date_de_depart_4');   /* Ajouté avec l'application ACF au template evenement */ ?></p>
+                        <?php echo do_shortcode('[extraire_pays]'); ?>
                         <?php echo do_shortcode('[extraire_categories]'); ?>
                     </article>
                 <?php endwhile; ?>
