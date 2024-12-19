@@ -13,17 +13,23 @@
     ?>
 
     <section class="global">
-        <h2>Front-page.php</h2>
+        <!-- <h2>Front-page.php</h2> -->
         <div class="principal__conteneur">
             <?php if (have_posts()):   /*permet d'extraire les articles*/ ?>
+                <?php echo do_shortcode('[extraire_cours]'); ?>
                 <?php while (have_posts()): the_post(); /* extrait un post */ ?>
                     <?php
-                    
+
                     get_template_part('template-parts/article', 'favorites');
-                    
+
                     ?>
-                    
+
+
+
                 <?php endwhile; ?>
+                <div class="accueil__galerie">
+
+                </div>
         </div>
     <?php endif ?>
     </section>

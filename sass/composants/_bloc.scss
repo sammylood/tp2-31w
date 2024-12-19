@@ -3,17 +3,28 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap:20px;
-  align-items: center;
+  // align-items: center;
   flex-basis: 1100px;
 }
 
 .principal__article {
-  border: 1px solid #aaa;
-  flex : 1 1 300px;
+  border: 1px solid #e4e4e4;
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc(25% - 16px);
   padding:10px;
-  min-height: 375px;
+  min-height: 450px;
+  
 }
 
 .principal__article--title {
-min-height: 3lh;
+min-height: 2lh;
+font-size: 1.3em;
+}
+
+@media screen and (max-width: 800px) {
+.principal__article{
+    flex-basis: 48%;
+    min-height:350px;
+  }
 }

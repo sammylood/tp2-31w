@@ -10,6 +10,6 @@
       </figure>
     <?php endif; ?>
 
-    <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-    <p><?php the_excerpt(); /*echo wp_trim_words(get_the_excerpt(), 20, null);    fonctionne seulement si the_post() est exécuté */ ?></p>
+    <h2 class="principal__article--title "><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <p><?php echo wp_trim_words(get_the_excerpt(), 20, null);  /*  fonctionne seulement si the_post() est exécuté */ ?></p>
   </article>

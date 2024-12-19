@@ -8,7 +8,7 @@ $hero_cta_text = get_theme_mod('hero_cta_text', 'Learn More');
 $hero_cta_link = get_theme_mod('hero_cta_link', '#'); 
 ?>
 
-<section class="global hero" style="background-image: url('<?php echo esc_url($hero_background); ?>');">
+<section class="hero" style="background-image: url('<?php echo esc_url($hero_background); ?>');">
     <div class="hero__contenu">
         <h1><?php echo esc_html($hero_title); ?></h1>
         <p><?php echo esc_html($hero_subtitle); ?></p>

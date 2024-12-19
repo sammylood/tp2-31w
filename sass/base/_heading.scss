@@ -23,7 +23,7 @@ h1 {
     }
     
     h1 {
-    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    font-family: rubik, Haettenschweiler, "Arial Narrow Bold", sans-serif;
     }
 @include regle_couleur_avant_arriere('.entete __titre h1 a', $couleur2, $couleur3);
 
