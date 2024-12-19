@@ -12,14 +12,10 @@
         <div class="principal__recherche">
             <?php if (have_posts()):   /*permet d'extraire les articles*/ ?>
                 <?php while (have_posts()): the_post(); /* extrait un post */ ?>
-                    <?php
-                    $chaine = get_the_title();
-                    $sigle = substr($chaine, 0, 7);
-                    $titre = substr($chaine, 8, stripos($chaine, "(") - 8);
-                    ?>
+                  
                     <article class="principal__article">
                         <h3>
-                            <?php echo $sigle; /* fonctionne seulement si the_post() est exécuté  / get_ sont des fonctions qui retournent des chaines de caracteres*/ ?>
+                            <?php the_title(); /* fonctionne seulement si the_post() est exécuté  / get_ sont des fonctions qui retournent des chaines de caracteres*/ ?>
                         </h3>
                         <h4 class="principal__article--title">
                             <a href="<?php the_permalink(); ?>">
