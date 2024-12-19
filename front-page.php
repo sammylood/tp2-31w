@@ -16,7 +16,7 @@
         <!-- <h2>Front-page.php</h2> -->
         <div class="principal__conteneur">
             <?php if (have_posts()):   /*permet d'extraire les articles*/ ?>
-                <?php echo do_shortcode('[extraire_cours]'); ?>
+                <!-- <?php echo do_shortcode('[extraire_categories]'); ?> -->
                 <?php while (have_posts()): the_post(); /* extrait un post */ ?>
                     <?php
 
