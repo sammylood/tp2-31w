@@ -1,7 +1,7 @@
     <footer class="pied">
         <section class="global">
             <div></div>
-            <div>© Voyages Just Travel <?php echo date('Y'); ?> <br><a href="https://github.com/sammylood/31w/tree/EF">Branche EF de mon theme</a>
+            <div>© Voyages Just Travel <?php echo date('Y'); ?> <br><a href="https://github.com/sammylood/tp2-31w/tree/EF">Branche EF de mon theme</a>
                 <a href="https://github.com/sammylood/filtrepays">Lien vers filtres pays</a>
             </div>
             <div></div>
