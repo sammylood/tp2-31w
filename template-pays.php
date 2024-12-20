@@ -15,22 +15,13 @@
 
                     <article class="principal__article">
                         <h1><?php the_title();   /* fonctionne seulement si the_post() est exécuté */ ?></h1>
-                        <?php the_post_thumbnail('medium'); /* Pour afficher l'image mis en avant */ ?>
                         <p><?php the_content();   /* fonctionne seulement si the_post() est exécuté */ ?></p>
                         <p><?php echo "Nombre de personnes: ";
                             the_field('nombre_de_personnes');   /* Ajouté avec l'application ACF au template evenement */ ?></p>
-                        <p><?php echo "Date de départ (personne 1): ";
+                        <p><?php echo "Date de départ : ";
                             the_field('la_date_de_depart');   /* Ajouté avec l'application ACF au template evenement */ ?></p>
-                        <p><?php echo "Date de départ (personne 2): ";
-                            the_field('la_date_de_depart_2');   /* Ajouté avec l'application ACF au template evenement */ ?></p>
-                        <p><?php if (the_field('la_date_de_depart_3')) {
-                                echo "Date de départ (personne 3): ";
-                            }
-                            the_field('la_date_de_depart_3');   /* Ajouté avec l'application ACF au template evenement */ ?></p>
-                        <p><?php if (the_field('la_date_de_depart_4')) {
-                                echo "Date de départ (personne 4): ";
-                            }
-                            the_field('la_date_de_depart_4');   /* Ajouté avec l'application ACF au template evenement */ ?></p>
+                        <p><?php echo "Date de retour: ";
+                            the_field('la_date_de_retour');   /* Ajouté avec l'application ACF au template evenement */ ?></p>
                         <?php echo do_shortcode('[extraire_pays]'); ?>
 
                     </article>
